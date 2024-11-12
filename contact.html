@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="#" class="logo"></a>
+            <nav class="nav-links">
+                <a href="index.html">🏠</a>
+                <a href="services.html">👤</a>
+                <a href="skills.html">🍃</a>
+                <a href="portfolio.html">📂</a>
+                <a href="blog.html">📊</a>
+                <a href="contact.html">📱</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="contact-container">
+                <img src="./images/Me.jpg" alt="Neel Pandey" class="hero-image">
+                
+                <div class="contact-content">
+                    <div>
+                        <span class="section-subtitle">GET IN TOUCH</span>
+                        <h2 class="section-title">CONTACT ME</h2>
+                    </div>
+
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="4bb09fe7-e390-40e8-87df-ad1db3f89860"/>
+                        <input type="hidden" name="subject" value="Thank You For Contacting Us."/>
+                        <input type="hidden" name="from_name" value="NeelResumeCv" />
+                        <!-- Custom URL -->
+                        <input type="hidden" name="redirect" value="https://neelmosespandey.github.io/MyPortfolio/submit.html">
+
+                        <input type="text" placeholder="Name" name="name" class="form-input" required>
+                        <input type="email" placeholder="Email" name="email" class="form-input" required>
+                        <input type="text" placeholder="Phone" name="phone" maxlength="10" class="form-input" required>
+                        <textarea placeholder="Your Message" name="message" class="form-input" required></textarea>
+                        <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    </form>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
