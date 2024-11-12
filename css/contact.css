@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #FFC107;
+    --text-light: #FFFFFF;
+    --nav-width: 80px;
+    --card-bg: #2A2A2A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--nav-width);
+    background-color: var(--bg-dark);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: var(--nav-width);
+    padding: 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.profile-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+textarea.form-input {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.contact-info {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-content {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1877f2;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:nth-child(2) { background-color: #1da1f2; }
+.social-link:nth-child(3) { background-color: #db4437; }
+.social-link:nth-child(4) { background-color: #0077b5; }
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        height: 400px;
+    }
+
+    .services-content {
+        order: 0; /* Reset order to keep it after image */
+    }
+
+    .hero-image {
+        display: none; /* Hide the hero image on mobile */
+    }
+
+}
